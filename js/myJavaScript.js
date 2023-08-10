@@ -1,13 +1,33 @@
 
-function add(firstNum, operator, secondNum){
-    //
+let firstNum, operator, secondNum;
+
+
+function add(){
+    console.log("add");
 }
-function subtract(firstNum, operator, secondNum){
-    //
+function subtract(){
+    console.log("subtract");
 }
-function multiply(firstNum, operator, secondNum){
-    //
+function multiply(){
+    console.log("multiply");
 }
-function divide(firstNum, operator, secondNum){
-    //
+function divide(){
+    console.log("divide");
+}
+
+function operate(operator){
+    switch(operator){
+        case '+':
+            add();
+            break;
+        case '-':
+            subtract();
+            break;
+        case '*':
+            multiply();
+            break;
+        case '/':
+            divide();
+            break;  
+    }    
 }
