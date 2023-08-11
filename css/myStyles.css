@@ -10,7 +10,7 @@ html{
 
 button{
     height: 65px;
-    width: 82.5px;
+    width: 80px;
 }
 
 div.calcContainer{
@@ -38,11 +38,13 @@ div.calcOutputViewContainer{
 
 div.calcOutputViewContainer > div{
     flex-grow: 1;
+    flex-basis: 50%;
+    padding: 8px;
 }
 
 div.calcButtonContainer{
     display: flex;
-    gap: 2px;
+    gap: 3px;
     padding: 1px;
     justify-content: center;
     flex-wrap: wrap;
@@ -54,4 +56,5 @@ div.calcButtonContainer{
 
 .calcNewInputView{
     border: 1px solid red;
+    text-align: right;
 }
