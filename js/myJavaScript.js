@@ -50,24 +50,29 @@ buttons.forEach((button) => {
             currentNum += button.textContent;
             currentNum  = +currentNum;
             calcNewInputView.textContent = currentNum;
-        }else if(validOps.includes(button.textContent) && currentNum  !== ""){//Enter if valid math operator
+        }else if(validOps.includes(button.textContent) && currentNum  !== ""){//Enter if valid math operator is entered
+            currOperator = button.textContent;
             if(firstNum == undefined){
-                currOperator = button.textContent;
-                console.log("first");
                 firstNum = currentNum ;
                 currentNum = "";
-                prevOperator = currOperator;
             }else if(currentNum !== ""){
-                currOperator = button.textContent;
-                console.log("second");
                 secondNum = currentNum;
                 firstNum = operate(prevOperator);
                 currentNum = "";
-                prevOperator = currOperator;
             }
+            prevOperator = currOperator;
             calcResultView.textContent = firstNum + " " + currOperator;
+            calcNewInputView.textContent = "";   
+        }else if(validOps.includes(button.textContent) && currentNum  === ""){//Enter if change math operator occur 
+            prevOperator = button.textContent;
+            calcResultView.textContent = firstNum + " " + prevOperator;
+        }else if(button.textContent === "=" && firstNum !== "" && calcNewInputView.textContent !== ""){//Enter if equals is entered
+            secondNum = currentNum;
+            firstNum = operate(prevOperator);
+            calcResultView.textContent = firstNum;
             calcNewInputView.textContent = "";
-            
+            secondNum = "";
+            currentNum = "";
         }
     });
 });
