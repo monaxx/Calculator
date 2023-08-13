@@ -14,7 +14,6 @@ button{
 }
 
 div.calcContainer{
-    background-color: lightgreen;
     padding: 30px;
 }
 
@@ -56,13 +55,27 @@ div.calcButtonContainer > button{
     padding-top: 18px;
 } 
 
-.calcResultView{
+div.calcResultView{
     border: 1px solid seagreen;
     font-size: 25px;
 }
 
-.calcNewInputView{
-    border: 1px solid red;
+div.calcNewInputView{
+    border: 1px solid lightseagreen;
     text-align: right;
     font-size: 22px;
+}
+
+button.deleteButton{
+    color: white;
+    background-color: #c7162b;
+    border-color: white;
+    border-width: 1px;
+}
+
+button.equalsSign{
+    color: white;
+    background-color: #109b26;
+    border-color: white;
+    border-width: 1px;
 }
