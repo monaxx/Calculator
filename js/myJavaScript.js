@@ -73,6 +73,7 @@ function chainOperation(operator){
 function changeOperation(operator){
     prevOperator = operator;
     calcResultView.textContent = firstNum + " " + prevOperator;
+ 
 }
 
 function appendDecimalPoint(){
@@ -133,7 +134,7 @@ buttons.forEach((button) => {
             appendNumber(button.textContent);
         }else if(validOps.includes(button.textContent) && currentNum  !== ""){//Enter if valid math operator is entered
             chainOperation(button.textContent);
-        }else if(validOps.includes(button.textContent)){//change operator
+        }else if(validOps.includes(button.textContent) && firstNum !== ""){//change operator
             changeOperation(button.textContent);
         }else if(button.textContent === "." && !hasDecimal){//add decimal point
             appendDecimalPoint();
